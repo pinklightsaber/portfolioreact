@@ -1,0 +1,96 @@
+@import './_config';
+@import './App';
+
+
+.projects {
+    padding-bottom: 2rem;
+
+    &__bio-image {
+        height: 30vh;
+        width: 100%;
+        background: 
+        linear-gradient((
+            to right,
+            rgba($winter, .0),
+            rgba($pastelPink, .4)
+        ));
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text-secondary{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+
+    &__items {
+        width:60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap:2rem;
+    }
+
+    &__item {
+        position: relative;
+        border-bottom: 5px solid $darkPurple;
+        overflow: hidden; 
+        cursor: pointer;
+
+
+        img {
+            width:100%;
+        }
+
+        &::after {
+            content: '';
+            position:absolute;
+            top:100%;
+            left:0;
+            height: 100%;
+            width: 100%;
+            background: $darkPurple;
+            opacity: 0;
+
+            @include t-ease;
+        }
+
+        &:hover {
+            &::after{
+                top: 0;
+                opacity: .9;
+            }
+
+            .projects__btn {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btns {
+        position: relative;
+        top:0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: center;
+    }
+
+    &__btn {
+        opacity: .9;
+        color: $darkPurple;
+
+        @include t-ease;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}

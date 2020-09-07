@@ -1,0 +1,107 @@
+//importar fuentes
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&family=Raleway:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+
+
+// color
+$darkPurple: #434868;
+$darker:   #4D4A59;
+$orange:    #F26666;
+$strongPink:  #ffafae;
+$pink:#ffafae;
+$celestial: #6f7a96;
+
+$winter: #F2F2F2;
+$winterPink: #fff3f3;
+$pastelGray: #D9D9D9;
+$gray:  #A6A6A6;
+$black: #0D0D0D;
+$blue:#4468c6;
+$pastelPink: #f8f2e6;
+
+
+//fonts 
+
+$roboto: 'Roboto', sans-serif;
+$open-sans: 'Open Sans Condensed', sans-serif;
+$dancing: 'Dancing Script', cursive;
+$Raleway: 'Raleway', sans-serif;
+// setting
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: $roboto;
+}
+@mixin circle {
+    border-radius: 50%;
+    background-position: center center;
+    margin: 1rem;
+    
+}
+
+@mixin sign {
+    padding: 1.2rem;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-family: $Raleway;
+    
+}
+
+@mixin basic {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin gray {
+    filter: grayscale(100%);
+}
+
+
+
+
+//efectos
+
+@mixin t-ease {
+    transition: all .5s ease-in-out;
+}
+
+
+//responsive
+
+@mixin mobile {
+    @media only screen and(max-width: 800px){
+        @content;
+    }
+}
+
+@function textColor($color){
+    @if(lightness($color)>40%){
+        @return $darkPurple;
+    } @else {
+        @return $pastelPink;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px){
+        @content;
+    }
+}
+
+
+   

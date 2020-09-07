@@ -1,0 +1,34 @@
+@import './config';
+
+
+.contact {
+    height:100%;
+    padding-top: 40vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background: 
+        linear-gradient((
+            to right,
+            rgba($winter, .0),
+            rgba($pastelPink, .4)
+        ));
+    background-size: cover;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    
+   
+}

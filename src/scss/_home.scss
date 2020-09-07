@@ -1,0 +1,91 @@
+@import './config';
+
+
+.home {
+    height:100vh;
+    padding-top: 5vh;
+    overflow:hidden;
+    align-items: center;
+    text-align: center;
+    
+    
+    position: relative;
+    z-index:-1;
+
+    background: linear-gradient(
+        rgba(255,255,255,.8), 
+        rgba(255,255,255,.8)), 
+        url(../assets/a1c27395998927.5eaf172cdca6d.jpg);
+   
+    background-size: cover;
+
+    svg{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        
+
+        text{
+            font-size: 3px;
+            font-family: $open-sans;
+            color: $strongPink;
+            
+        }
+    }
+    img{
+        position: relative;
+        @include circle;
+        @include gray;
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        background: url(../assets/mine2.jpg);
+        background-size: cover;
+        
+
+    }
+   
+    h2 {
+        
+        font-family: $dancing;
+        color:$winter;
+        
+       
+        text-align: center;
+        
+
+        span {
+            background: $winterPink;
+            margin-left: 20vw;
+            
+            color: $darkPurple;
+            font-size: 1.3rem;
+            margin: 1rem;
+            padding: 0 1rem;
+            
+           
+            
+        }
+    }
+    &__name {
+        font-size: 8vw;
+        padding-bottom:1rem;
+        margin:1rem;
+        color:$winter;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .4rem;
+   
+        span{
+            padding: 2vh;
+            background :$strongPink;
+        }
+       
+        
+        &--last {
+            color: $winterPink;
+            
+        }
+    }
+   
+}

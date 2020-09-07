@@ -1,0 +1,77 @@
+@import '_config.scss';
+@import '_home';
+@import '_menu';
+@import '_responsive';
+
+
+body {
+    background: $winter;
+    color: textColor($winter);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+a{
+    color: $darkPurple;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    z-index:2;
+    width: 100%;
+    
+}
+main{
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.text-secondary {
+    color: $darkPurple
+}
+
+.social-icons{
+    position: fixed;
+    z-index: -2;
+    bottom: 1rem;
+    left: 1rem;
+    
+   @include mobile{
+       display: flex;
+       flex-direction: column;
+    }
+
+    a {
+        color: $strongPink;
+        padding: .4rem;
+        @include t-ease;
+
+        &:hover{
+            color: $celestial;
+        }
+    }
+}
+
+footer {
+    font-size:1rem;
+    position: fixed;
+    bottom: .4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: $strongPink;
+
+    // @include mobile {
+    //     transform:
+    //         rotate(90deg)
+    //         translate(-3rem, -5rem)
+    // }
+}

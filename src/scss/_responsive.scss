@@ -1,0 +1,134 @@
+@import './_config.scss';
+@import './svgs.scss';
+
+@include media-md {
+
+
+   
+
+    // MENU
+    #menu-btn {
+        visibility: hidden;
+    }
+    #nav {
+        visibility: visible;
+
+        #menu-nav {
+            display: block;
+            transform:translateY(0);
+            height: 100%;
+            background:transparent;
+            @include basic;
+            
+
+            &:hover {
+                background: $pink;
+            }
+
+            .menu-nav__item{
+                display: inline;
+                @include sign;
+                
+                &:hover {
+                    background: $celestial;
+                    @include t-ease
+                }
+
+
+            }
+
+            
+        }
+    }
+
+
+
+
+     // HOME
+     .home {
+        background: $pink url(../assets/a1c27395998927.5eaf172cdca6d.jpg);
+        background-size: cover;
+        h2{
+            span {
+                background: $winter;
+                margin-left: 20vw;
+                color: $pastelPink;
+                background: $celestial;
+                font-size: 2rem;
+                margin: 1px;
+                padding: 0 1rem;
+               
+                
+            }
+        }
+        
+        
+        
+ 
+        &__name {
+            font-size: 12vh;
+        }
+     }
+ 
+     
+    //  ABOUT
+    .about {
+
+        &__bio{
+            font-size: 1.5rem;
+
+        }
+
+        .jobs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+    }
+
+    
+
+
+
+
+    // PROJECT
+    .projects {
+        &__bio-image {
+            height: 40vh;
+        }
+
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-secondary {
+            font-size:3rem;
+        }
+    }
+
+    // CONTACTO
+    .contact__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@include media-lg {
+    .about{
+
+
+    }
+    
+    .projects {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contact__list {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@include media-xl {
+    .projects__bio-image {
+        height: 50vh;
+    }
+}
