@@ -19,7 +19,7 @@ function ContactForm ()  {
   const handleOnSubmit = (values, actions) => {
     axios({
       method: "POST",
-      url: "http://formspree.io/ctorres@idemar.cl",
+      url: "https://formspree.io/mnqgezjo",
       data: values
     })
       .then(response => {
