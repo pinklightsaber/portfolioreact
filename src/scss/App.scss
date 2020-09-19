@@ -5,8 +5,7 @@
 
 
 body {
-    background: $winter;
-    color: textColor($winter);
+    color: $primary;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
@@ -15,9 +14,13 @@ body {
 h1, h2, h3 {
     font-weight: 400;
 }
+p{
+    font-size: .8rem;
+    line-height: 3vh;
+}
 
 a{
-    color: $darkPurple;
+    color: $purple;
     text-decoration: none;
 }
 
@@ -34,8 +37,25 @@ main{
     
 }
 
+
 .text-secondary {
-    color: $darkPurple
+    color: $darkPurple;
+    
+    margin-left: -20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.title {
+    display: flex;
+
+}
+
+.big{
+    font-size: 5rem;
+    color: $pastelPurple;
+    font-weight: 800;
+    margin-top: -4vh;
 }
 
 .social-icons{
@@ -50,12 +70,12 @@ main{
     }
 
     a {
-        color: $strongPink;
+        color: $darkPurple;
         padding: .4rem;
         @include t-ease;
 
         &:hover{
-            color: $celestial;
+            color: $orange;
         }
     }
 }
@@ -67,7 +87,8 @@ footer {
     right: 1rem;
     text-align: right;
     padding: 1rem;
-    color: $strongPink;
+    color: $darkPurple;
+    font-weight: 600;
 
     // @include mobile {
     //     transform:

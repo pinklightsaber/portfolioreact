@@ -1,21 +1,29 @@
 @import './_config';
 @import './App';
 
+// $colors: $orange, $winterPink, $pastelPink, $blue, $pastelGray;
+
+// @for $i from 1 through length($colors) {
+// 	.jobs__job:nth-child(#{length($colors)}n+#{$i}) {
+// 		background: nth($colors, $i), 20%;
+//     }
+// }
+
 
 .about {
     padding-bottom: 2rem;
     background:linear-gradient(
-        $winterPink, $winter
+        $winter, $winter, $secondary, 
     );
-    color: $darkPurple;
+    color: $primary;
+    
 
     
 
     &__bio-image {
         height: 30vh;
         width: 100%;
-        background: url(../assets/a1c27395998927.5eaf172cdca6d.jpg);
-        background-size: cover;
+        @include bg;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,35 +50,39 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-gap:2rem;
+       
+
         
+       
+        h1 {
+            font-size: 10vh;
+            padding: 1rem;
+            text-align: center;
+            color: $purple
+        }
 
         &__job{
-            background: lighten($winter, 10%);
             
-            border-bottom: 5px solid $strongPink;
+            margin-bottom: 0 auto;
+           
+            border-bottom: 5px solid $purple;
+            
           
         }
 
         h2{
             
             font-size:1rem;
-            @include sign;
             @include basic;
-           
-            background: $strongPink;
-            margin:-10px 10px 0 -10px
+            color: $purple;
+            margin:0;
           
         }
 
-        h3 {
-            margin: 1rem .5rem;
-            color: $strongPink;
-            @include basic;
-            
-        }
+        
 
         h6{
-            border-bottom: 1px solid $strongPink;
+            border-bottom: 1px solid $secondary;
             padding-bottom: 1vh;
             text-transform: uppercase;
         }
@@ -80,6 +92,7 @@
             text-align: justify;
             
         }
+   
     }
 
     

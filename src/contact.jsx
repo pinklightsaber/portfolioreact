@@ -1,39 +1,27 @@
 import React from 'react';
-import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-import RoomIcon from '@material-ui/icons/Room';
-import Form from './test';
+import Slide from 'react-reveal/Slide';
+import MediaQuery from "react-responsive";
+import Datos from './datos';
+import Form from './form';
 
 import './scss/contact.scss';
 
 function Contact (){
     return (
-        <main>
+        <main id="Contact">
             <section className="contact">
-                <h2>Contactame</h2>
-
+            <div className="title">
+                <h1 className="big">HI</h1>
+                <h1 className="text-secondary">Contáctame</h1>
+            </div>
+                
+            <Slide bottom>
                 <Form/>
-
-                <div className="contact__list">
-                    <div className="contact__email">
-                        <AlternateEmailIcon/>Email
-                        <div className="text-secondary">
-                            email@email.com
-                        </div>
-                    </div>
-                    <div className="contact__phone">
-                        <PhoneAndroidIcon/>Número
-                        <div className="text-secondary">
-                            +56979778088
-                        </div>
-                    </div>
-                    <div className="contact__address">
-                        <RoomIcon/>Dirección
-                        <div className="text-secondary">
-                            En el campo
-                        </div>
-                    </div>
-                </div>
+            </Slide>
+                <MediaQuery maxDeviceWidth={768}>
+                
+              <Datos/>
+              </MediaQuery>
                 
             </section>
         </main>

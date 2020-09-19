@@ -1,23 +1,31 @@
 //importar fuentes
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&family=Raleway:wght@400;700&family=Roboto:wght@300;700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 // color
+
+$primary: #372f3a;
+$purple: #502c56;
+$secondary: #e1d9d3;
 $darkPurple: #434868;
+$pastelPurple: #6a5975;
+$darkBlue:  #27436c;
+
+
 $darker:   #4D4A59;
 $orange:    #F26666;
-$strongPink:  #ffafae;
-$pink:#ffafae;
+$strongPink:  #eb7272;
+$pink:#ffd9da;
 $celestial: #6f7a96;
 
 $winter: #F2F2F2;
-$winterPink: #fff3f3;
+$winterPink: #e5bc9a;
 $pastelGray: #D9D9D9;
 $gray:  #A6A6A6;
 $black: #0D0D0D;
-$blue:#4468c6;
+$blue:#297994;
 $pastelPink: #f8f2e6;
 
 
@@ -27,6 +35,8 @@ $roboto: 'Roboto', sans-serif;
 $open-sans: 'Open Sans Condensed', sans-serif;
 $dancing: 'Dancing Script', cursive;
 $Raleway: 'Raleway', sans-serif;
+$greatvibes: 'Great Vibes', cursive;
+$yeseva: 'Yeseva One', cursive;
 // setting
 
 * {
@@ -37,8 +47,10 @@ $Raleway: 'Raleway', sans-serif;
 }
 @mixin circle {
     border-radius: 50%;
-    background-position: center center;
-    margin: 1rem;
+    
+    width: 200px;
+    height: 200px;
+    
     
 }
 
@@ -47,6 +59,7 @@ $Raleway: 'Raleway', sans-serif;
     text-align: center;
     letter-spacing: .1rem;
     font-family: $Raleway;
+    list-style-type: none;
     
 }
 
@@ -60,7 +73,15 @@ $Raleway: 'Raleway', sans-serif;
 }
 
 
-
+@mixin bg {
+    
+    background: url('../assets/a1c27395998927.png'), $winter;
+        // linear-gradient(
+        //     $winter, 
+        //     $secondary);
+        background-size: cover;
+    
+}
 
 //efectos
 
@@ -104,4 +125,13 @@ $Raleway: 'Raleway', sans-serif;
 }
 
 
-   
+//Button
+
+.button{
+    border: 1px solid $strongPink;
+    margin: 2vh;
+
+    &:hover{
+        background: $strongPink
+    }
+}

@@ -9,12 +9,14 @@ import Contact from './contact';
 import Footer from './footer';
 
 
-import {Route, HashRouter} from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Switch, HashRouter} from 'react-router-dom';
+// import ScrollHandler from './Scroll';
 
 import './scss/App.scss';
 
 function App() {
-  return (
+  return ( 
     <div>
 
         <HashRouter>
@@ -24,11 +26,29 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path="/projects" component={Projects}/>
               <Route path="/contact" component={Contact}/>
+              <Footer/>
           </div>
+          <div className="contentdesktop">
+            <Router>
+              <Switch>
+                <Route>
+                  <Home/>
+                  <About/>
+                  <Projects/>
+                  <Contact/>
+                  <Footer/>
+                </Route>
+              </Switch>
+            </Router>
+          </div>
+          
+          
+
+          
         </HashRouter>
         
             
-        <Footer/>
+       
     </div>
     
   

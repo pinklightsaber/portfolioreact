@@ -3,18 +3,20 @@
 
 .contact {
     height:100%;
-    padding-top: 40vh;
+    padding-top: 20vh;
     overflow:hidden;
     display:flex;
     flex-direction: column;
     align-items: center;
     background: 
-        linear-gradient((
-            to right,
-            rgba($winter, .0),
-            rgba($pastelPink, .4)
-        ));
+    url(../assets/a1c27395998927.png),
+        linear-gradient(
+            $winter,
+            $pastelPink
+        );
     background-size: cover;
+    height: 100vh;
+    background-position-y: bottom;
 
     h2 {
         font-size: 3rem;
@@ -25,8 +27,16 @@
     &__list {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        font-size: 1.5rem;
+        font-size:2.8vh;
+        margin: 2vh;
+
+        svg {
+            margin: -1vh 10px;
+        }
+        span{
+            line-height: 4vh;
+        }
+      
     }
 
     

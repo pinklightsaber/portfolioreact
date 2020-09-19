@@ -1,41 +1,75 @@
 @import './_config.scss';
 @import './svgs.scss';
 
+
+// I MEDIUM +
 @include media-md {
+    .contentdesktop {
+        display: block
+    }
+    .content {
+        display: none;
+    }
 
-
-   
-
-    // MENU
-    #menu-btn {
+// I - MENU
+    #menu-btn, #nav {
         visibility: hidden;
     }
-    #nav {
-        visibility: visible;
 
-        #menu-nav {
-            display: block;
+    
+    #nav-desktop {
+        display: block;
+        cursor: pointer;
+
+        .menu-desktop {
+            display: flex;
             transform:translateY(0);
-            height: 100%;
+            width:100vw;
             background:transparent;
             @include basic;
+            position:fixed;
+            z-index: 100;
+            @include sign;
+           
+            font-size: .8rem;
+            justify-content: flex-end;
             
-
             &:hover {
-                background: $pink;
+                background: $winter;
             }
+            &__name{
+                margin-right: auto;
+                @include sign;
 
-            .menu-nav__item{
-                display: inline;
+                &--last{
+                    background-color:$purple;
+                    color:$winter
+                }
+            }
+            &__item{
+                justify-content: flex-end;
+                
                 @include sign;
                 
+                .active{
+                    background-color: pink;
+                    display:inline-block;
+                    width:100%;
+                    height:100%;
+                   
+                }
                 &:hover {
-                    background: $celestial;
-                    @include t-ease
+                    background: $primary;
+                    @include t-ease;
+                     a{
+                         color: $winter
+                     }
                 }
 
 
             }
+
+          
 
             
         }
@@ -44,44 +78,165 @@
 
 
 
-     // HOME
+// I.2 - HOME
      .home {
-        background: $pink url(../assets/a1c27395998927.5eaf172cdca6d.jpg);
-        background-size: cover;
+       
+        
         h2{
             span {
                 background: $winter;
                 margin-left: 20vw;
                 color: $pastelPink;
                 background: $celestial;
-                font-size: 2rem;
+                
+                
                 margin: 1px;
                 padding: 0 1rem;
                
                 
             }
         }
+
+        &__img{
+           
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 90vw;
+            
+        }
+
+       
+        img {
+            position: absolute;
+            background: url('../assets/duh.png');
+          top:0;
+          left: 0;
+          height: 90vh;
+          width: 90vw;
+           padding: 1rem;
+           background-size: contain;
+           filter:none;
+           
+           background-repeat: no-repeat;
+           margin: 10vh 0 0 0;
+           border-radius: 5%;
+           z-index: 1;
+            
+        }
         
         
-        
+        #grad{
+            display: none;
+        }
  
         &__name {
-            font-size: 12vh;
+            font-size: 10vw;
+
+           
         }
+        p{
+            display: block
+        }
+
+        .wave{
+            height: 150px; 
+            overflow: hidden;
+            position: absolute;
+            width: 100vw;
+            bottom:0;
+            display:block;
+
+            svg{
+                height: 100%; 
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                path{
+                    stroke: none; fill: $winter;
+                }
+            }
+        }
+        
      }
  
      
-    //  ABOUT
+// I-3 ABOUT
     .about {
+
+        background-color: $winterPink ;
+        background-image: linear-gradient(180deg,$winter  61%, #cec3c6 100%);
+
 
         &__bio{
             font-size: 1.5rem;
+            &-image{
+                background: transparent;
+            }
 
         }
+        .jobs{
+            width: 80vw;
+            
+        
+        &__job {
+            margin: 4rem 0;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 0;
+            
 
-        .jobs {
-            grid-template-columns: repeat(2, 1fr);
+            div{
+                margin: 0 3rem;
+                width: 50%;
+               
+                
+            }
+            div:nth-child(odd){
+                text-align: right;
+                h6, h2{
+                    text-align: right;
+                }
+                h1{
+                    text-align: right;
+                    display: inline-block;
+              
+                   &::after{
+                    margin-left: -11rem;
+                   }
+                  
+                }
+            }
+            div:nth-child(even){
+                h2{
+                    text-align: left;
+                    margin:.5rem;
+                }
+                
+            }
+            
+
+            h1{
+              
+                font-size: 10rem;
+
+
+            
+
+            }
+
+            h2{
+                margin: 2rem 0;
+               
+                font-size: 1.5rem;
+            }
+           
+           
+          
+            
+         
         }
+    }
         
     }
 
@@ -90,10 +245,20 @@
 
 
 
-    // PROJECT
+//I-4 PROJECT
     .projects {
+
+        h1:nth-child(2){
+            color:$winter;
+        }
+        svg{
+            display: inline;
+        }
+        background: $primary;
+
         &__bio-image {
-            height: 40vh;
+            height: 5vh;
+
         }
 
         &__items {
@@ -104,28 +269,72 @@
         }
     }
 
-    // CONTACTO
-    .contact__list {
-        grid-template-columns: repeat(2,1fr);
+//I.5 - CONTACTO
+    // .contact__list {
+    //     grid-template-columns: repeat(2,1fr);
+    // }
+
+    .content {
+        display:hidden;
+    }
+
+//I-6 - Footer {
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: static !important;
+        background: $purple;
+        color: $winter!important;
+        justify-content: center;
+      
+     
+        img{
+            background: url('../assets/mine.jpg');
+            @include circle;
+            margin-bottom: 2rem;
+            background-size: cover;
+            margin: 0 10rem
+        }
+
+        p{
+            text-align: center;
+            color: $winter;
+        }
+        
+    }
+    .social-icons{
+        position: static !important;
+        z-index: 1!important;
+        
+        a{
+            color: $winter!important;
+            
+        }
+        
     }
 }
 
+// II LARGE +
 @include media-lg {
-    .about{
 
 
-    }
+// II.4 - PROYECTOS
     
     .projects {
         &__items {
             grid-template-columns: repeat(3, 1fr);
         }
     }
+//II.5 - CONTACTO
 
-    .contact__list {
-        grid-template-columns: repeat(3,1fr);
-    }
+    // .contact__list {
+    //     grid-template-columns: repeat(3,1fr);
+    // }
+
+//I
 }
+
+//III - EXTRA LARGE
 
 @include media-xl {
     .projects__bio-image {

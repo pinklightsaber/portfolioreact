@@ -4,57 +4,75 @@
 
 .projects {
     padding-bottom: 2rem;
-
+    background: linear-gradient(
+            rgba(255,255,255,.8), 
+            rgba(255,255,255,.8)), 
+            url(../assets/a1c27395998927.png);
+       
+        background-size: cover;
+    min-height: 100vh;
+    background-position-y: center;
+    
+    svg{
+        display: none;
+    }
     &__bio-image {
         height: 30vh;
         width: 100%;
-        background: 
-        linear-gradient((
-            to right,
-            rgba($winter, .0),
-            rgba($pastelPink, .4)
-        ));
-        background-size: cover;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
 
-        .text-secondary{
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
+        
     }
 
 
     &__items {
-        width:60vw;
+      
         margin: 2rem auto 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap:2rem;
+        display: flex;
+        
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-gap:2rem;
+
+    }
+    .rec-arrow{
+        visibility: hidden;
+    }
+    div{
+        box-shadow: none;
+        background-color: transparent;
     }
 
     &__item {
         position: relative;
-        border-bottom: 5px solid $darkPurple;
+        border-bottom: 5px solid $secondary;
         overflow: hidden; 
         cursor: pointer;
+        display: flex;
+        height: 55vh;
+        
+        
 
 
         img {
             width:100%;
+            object-fit: cover;
         }
 
         &::after {
             content: '';
-            position:absolute;
+            position: absolute;
             top:100%;
             left:0;
             height: 100%;
             width: 100%;
-            background: $darkPurple;
+            background: $pastelPurple;
             opacity: 0;
+            
 
             @include t-ease;
         }
@@ -63,6 +81,7 @@
             &::after{
                 top: 0;
                 opacity: .9;
+                
             }
 
             .projects__btn {
@@ -72,11 +91,11 @@
     }
 
     &__btns {
-        position: relative;
+        position: absolute;
         top:0;
         height: 100%;
         width: 100%;
-        z-index: -1;
+        z-index: 1;
         display:grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -84,13 +103,17 @@
     }
 
     &__btn {
-        opacity: .9;
-        color: $darkPurple;
+        opacity: 0;
+        color: $winter;
 
         @include t-ease;
 
         &:hover {
-            color: $orange;
+            color: $purple;
         }
+    }
+
+    img{
+        
     }
 }
