@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolioreact/static/css/main.f0196bc1.chunk.css",
-    "main.js": "/portfolioreact/static/js/main.4991abda.chunk.js",
-    "main.js.map": "/portfolioreact/static/js/main.4991abda.chunk.js.map",
+    "main.css": "/portfolioreact/static/css/main.d7433353.chunk.css",
+    "main.js": "/portfolioreact/static/js/main.2674c9c5.chunk.js",
+    "main.js.map": "/portfolioreact/static/js/main.2674c9c5.chunk.js.map",
     "runtime-main.js": "/portfolioreact/static/js/runtime-main.45fc4603.js",
     "runtime-main.js.map": "/portfolioreact/static/js/runtime-main.45fc4603.js.map",
-    "static/js/2.153e55ac.chunk.js": "/portfolioreact/static/js/2.153e55ac.chunk.js",
-    "static/js/2.153e55ac.chunk.js.map": "/portfolioreact/static/js/2.153e55ac.chunk.js.map",
+    "static/js/2.d3e171a3.chunk.js": "/portfolioreact/static/js/2.d3e171a3.chunk.js",
+    "static/js/2.d3e171a3.chunk.js.map": "/portfolioreact/static/js/2.d3e171a3.chunk.js.map",
     "index.html": "/portfolioreact/index.html",
-    "precache-manifest.f61b9a2df78798597d436c39db41e126.js": "/portfolioreact/precache-manifest.f61b9a2df78798597d436c39db41e126.js",
+    "precache-manifest.18bc77160894cd95cbef08c7df01aa0d.js": "/portfolioreact/precache-manifest.18bc77160894cd95cbef08c7df01aa0d.js",
     "service-worker.js": "/portfolioreact/service-worker.js",
-    "static/css/main.f0196bc1.chunk.css.map": "/portfolioreact/static/css/main.f0196bc1.chunk.css.map",
-    "static/js/2.153e55ac.chunk.js.LICENSE.txt": "/portfolioreact/static/js/2.153e55ac.chunk.js.LICENSE.txt",
+    "static/css/main.d7433353.chunk.css.map": "/portfolioreact/static/css/main.d7433353.chunk.css.map",
+    "static/js/2.d3e171a3.chunk.js.LICENSE.txt": "/portfolioreact/static/js/2.d3e171a3.chunk.js.LICENSE.txt",
     "static/media/projects.scss": "/portfolioreact/static/media/a1c27395998927.47635092.png",
     "static/media/App.scss": "/portfolioreact/static/media/mine2.b10a1a8c.jpg",
     "static/media/proyecto1.JPG": "/portfolioreact/static/media/proyecto1.0fdd0c9a.JPG",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.45fc4603.js",
-    "static/js/2.153e55ac.chunk.js",
-    "static/css/main.f0196bc1.chunk.css",
-    "static/js/main.4991abda.chunk.js"
+    "static/js/2.d3e171a3.chunk.js",
+    "static/css/main.d7433353.chunk.css",
+    "static/js/main.2674c9c5.chunk.js"
   ]
 }
